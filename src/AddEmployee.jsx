@@ -35,12 +35,12 @@ const AddEmployee = () => {
   return (
     <div>
       <div className="h-screen w-screen flex items-center justify-start flex-col gap-10 mt-10">
-        <header className="h-[80px] w-[90%] bg-black text-white rounded-2xl flex justify-around items-center">
-          <Link to="/">Home</Link>
-          <Link to="/deleteemp">Delete Employees</Link>
-          <Link to="/updateemp">Update Employees</Link>
-          <Link to="/showemp">Show Employees</Link>
-          <Link to="/findall">Find All</Link>
+        <header className="h-[80px] w-[90%] bg-black text-white rounded-2xl flex items-center justify-around text-xl">
+          <div className="w-[15%] flex items-center justify-center  duration-200 hover:mb-2 hover:text-2xl" ><Link to="/" >Home</Link></div>
+         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/deleteemp">Delete Employees</Link></div>
+         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/updateemp">Update Employees</Link></div>
+         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/showemp">Show Employees</Link></div>
+         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/findall">Find All</Link></div>
         </header>
 
         <main className="sm:h-[60%] sm:w-[50%] flex items-center justify-center mx-4 my-4">
