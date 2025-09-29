@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const AddEmployee = () => {
   const [id, setId] = useState("");
@@ -33,53 +32,41 @@ const AddEmployee = () => {
   };
 
   return (
-    <div>
-      <div className="h-screen w-screen flex items-center justify-start flex-col gap-10 mt-10">
-        <header className="h-[80px] w-[90%] bg-black text-white rounded-2xl flex items-center justify-around text-xl">
-          <div className="w-[15%] flex items-center justify-center  duration-200 hover:mb-2 hover:text-2xl" ><Link to="/" >Home</Link></div>
-         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/deleteemp">Delete Employees</Link></div>
-         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/updateemp">Update Employees</Link></div>
-         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/showemp">Show Employees</Link></div>
-         <div className="w-[15%] flex items-center justify-center duration-200 hover:mb-2 hover:text-2xl"> <Link to="/findall">Find All</Link></div>
-        </header>
-
-        <main className="sm:h-[60%] sm:w-[50%] flex items-center justify-center mx-4 my-4">
-          <div className="flex flex-col h-80 w-80 rounded-xl items-center justify-around border-2 border-black shadow-md">
-            <h1 className="text-xl">Enter Employee details</h1>
-            <input
-              type="text"
-              placeholder="Id"
-              className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
-              onChange={(e) => setId(e.target.value)}
-              value={id}
-            />
-            <input
-              type="text"
-              placeholder="Name"
-              className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-            <input
-              type="text"
-              placeholder="Salary"
-              className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
-              onChange={(e) => setSalary(e.target.value)}
-              value={salary}
-            />
-            <button
-              className="bg-green-400 w-[90%] border-2 border-black rounded-xl hover:bg-green-300 shadow-md"
-              onClick={handleAdd}
-            >
-              Add
-            </button>
-            <div className="text-sm p-2 text-blue-600 h-2">
-              <p>{msg}</p>
-            </div>
+      <main className="sm:h-[60%] sm:w-[50%] flex items-center justify-center mx-4 my-4">
+        <div className="flex flex-col h-80 w-80 rounded-xl items-center justify-around border-2 border-black shadow-md">
+          <h1 className="text-xl">Enter Employee details</h1>
+          <input
+            type="text"
+            placeholder="Id"
+            className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
+            onChange={(e) => setId(e.target.value)}
+            value={id}
+          />
+          <input
+            type="text"
+            placeholder="Name"
+            className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+          <input
+            type="text"
+            placeholder="Salary"
+            className="outline-none w-[90%] border-2 border-black rounded-xl p-1 shadow-md duration-200 hover:scale-[105%]"
+            onChange={(e) => setSalary(e.target.value)}
+            value={salary}
+          />
+          <button
+            className="bg-green-400 w-[90%] border-2 border-black rounded-xl hover:bg-green-300 shadow-md"
+            onClick={handleAdd}
+          >
+            Add
+          </button>
+          <div className="text-sm p-2 text-blue-600 h-2">
+            <p>{msg}</p>
           </div>
-        </main>
-      </div>
-    </div>
+        </div>
+      </main>
   );
 };
 
