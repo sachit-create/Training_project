@@ -30,7 +30,6 @@ const Add = () => {
       setColor("green")
       setMessage(res.data.message || "Employee added successfully");
 
-      // Clear inputs
       setName("");
       setPosition("");
       setDepartment("");
